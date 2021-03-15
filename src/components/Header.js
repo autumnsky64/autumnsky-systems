@@ -6,13 +6,10 @@ import avatar from '../assets/images/avatar.jpg'
 const Header = () => (
   <header id="header">
     <div className="inner">
-      <a href="#" className="image avatar">
-        <img src={avatar} alt="" />
-      </a>
       <h1>
-        <strong>Autumnsky systems</strong>
-        <br />As clear code as autumn sky.
+        Autumnsky systems
       </h1>
+      <p>As clear code as autumn sky.</p>
     </div>
     <Footer />
   </header>

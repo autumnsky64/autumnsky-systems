@@ -43,6 +43,13 @@
 	$size-header-width: 35%;
 	$size-header-pad: 4em;
 
+@font-face {
+	font-family: 'monofur';
+	font-style: normal;
+	font-weight: normal;
+	src: local('../fonts/monofur55.woff') format('woff');
+}
+
 /* Basic */
 
 	body {
@@ -66,13 +73,13 @@
 
 	a {
 		@include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
-		border-bottom: dotted 1px;
 		color: _palette(accent1, bg);
 		text-decoration: none;
 
 		&:hover {
 			border-bottom-color: transparent;
 			color: _palette(accent1, bg) !important;
+			border-bottom: dotted 1px;
 			text-decoration: none;
 		}
 	}
@@ -88,10 +95,14 @@
 
 	p {
 		margin: 0 0 _size(element-margin) 0;
+
+		&.profile {
+			padding-top: 1em;
+		}
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
+		color: _palette(accent2,fg);
 		font-weight: _font(weight-bold);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -537,6 +548,8 @@
 		}
 
 		&.avatar {
+
+			width: 6.5em;
 			border-radius: 100%;
 
 			&:before {
@@ -712,6 +725,10 @@
 
 	dl {
 		margin: 0 0 _size(element-margin) 0;
+
+		dd + dt {
+			margin-top: _size(element-margin);
+		}
 	}
 
 /* Table */
@@ -906,7 +923,7 @@
 		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
 		background-position:	top left,							top left;
 		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto;
+		background-size:		auto,								contain;
 		color: _palette(accent2, fg);
 		height: 100%;
 		left: 0;
@@ -915,6 +932,7 @@
 		text-align: right;
 		top: 0;
 		width: $size-header-width;
+
 
 		> * {
 			@include vendor('flex-shrink', '0');
@@ -936,9 +954,20 @@
 
 		h1 {
 			color: _palette(accent2, fg);
-			font-size: 1.35em;
+			font-size: 2em;
 			line-height: 1.75em;
 			margin: 0;
+		}
+
+		h1,p {
+			font-family: monofur;
+			font-weight: 500;
+			color: _palette(accent2, fg-bold);
+		}
+
+		p {
+			color: _palette(fg-light);
+			font-size: 1.5em;
 		}
 
 		.image.avatar {
@@ -954,13 +983,12 @@
 			margin: (_size(element-margin) * 0.5) 0 0 0;
 
 			a {
-				color: _palette(accent2, fg-light);
+				color: _palette(accent2, fg-bold);
 			}
 		}
 
 		.copyright {
-			color: _palette(accent2, fg-light);
-			font-size: 0.8em;
+			color: _palette(accent2, fg-bold);
 			list-style: none;
 			margin: (_size(element-margin) * 0.5) 0 0 0;
 			padding: 0;
@@ -1205,7 +1233,7 @@
 				padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 				width: $size-header-width;
 
-				h1 {
+				h1,p {
 					font-size: 1.25em;
 
 					br {
@@ -1279,7 +1307,7 @@
 				width: 100%;
 				display: block;
 
-				h1 {
+				h1,p {
 					font-size: 1.75em;
 
 					br {
@@ -1380,7 +1408,7 @@
 			#header {
 				padding: ($size-header-pad * 1.5) $size-header-pad;
 
-				h1 {
+				h1,p {
 					font-size: 1.35em;
 				}
 			}

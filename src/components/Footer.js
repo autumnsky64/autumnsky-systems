@@ -5,17 +5,17 @@ const Footer = () => (
     <div className="inner">
       <ul className="icons">
         <li>
-          <a href="#" className="icon fa-github">
+          <a href="https://github.com/akiya64/" className="icon fa-github">
             <span className="label">Github</span>
           </a>
         </li>
         <li>
-          <a href="#" className="icon fa-facebook">
+          <a href="https://www.facebook.com/amunenaga/" className="icon fa-facebook">
             <span className="label">Facebook</span>
           </a>
         </li>
         <li>
-          <a href="#" className="icon fa-envelope-o">
+          <a href="mailto:autumnsky64@gmail.com" className="icon fa-envelope-o">
             <span className="label">Email</span>
           </a>
         </li>
