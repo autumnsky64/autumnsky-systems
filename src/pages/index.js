@@ -33,15 +33,17 @@ const HomeIndex = () => {
           <h3>WordPress</h3>
           <ul>
             <li>テーマ作成</li>
-            <li>プラグイン作成</li>
-            <li>ブロック作成</li>
-            <li>WP-CLI活用</li>
+            <li>プラグイン開発</li>
+            <li>ブロック開発</li>
+            <li>WP-CLI 活用</li>
             <li>実行環境構築（Ubuntu、CentOS、Docker）</li>
           </ul>
 
-          <h3>Vue.js</h3>
+          <h3>JavaScript</h3>
           <ul>
-            <li>フロントエンドのインタラクション作成など</li>
+            <li>Vue.js でのフロントエンドのインタラクション作成</li>
+            <li>WordPress ブロックエディタのブロック開発</li>
+            <li>Gatsby でスターターを利用したサイト作成</li>
           </ul>
 
           <h3>Android アプリ</h3>
@@ -55,7 +57,7 @@ const HomeIndex = () => {
           <h2>実績</h2>
           <dl>
             <dt><a href="https://wocker.dev/" target="blank">Wocker</a></dt>
-            <dd>Docker ベース WordPress実行環境 コントリビュータ</dd>
+            <dd>Docker ベース WordPress 実行環境 コントリビュータ</dd>
             <dt><a href="https://katsuragawa-lc.com/" target="blank">桂川レディースクリニック</a></dt>
             <dd><a href="https://kiteretz.com/" target="blank">株式会社 キテレツ</a>のコラボレーターとして、WordPress の投稿タイプ設計、テーマテンプレート設計、専用プラグインの作成を担当</dd>
             <dt><a href="https://play.google.com/store/apps/details?id=systems.autumnsky.linden_free" target="blank">LindenFree</a></dt>
@@ -64,8 +66,11 @@ const HomeIndex = () => {
             <dd>兵庫県 COVID-19 ビジュアライゼーションサイト コントリビュータ</dd>
             <dt><a href="https://odekake-wanko-bu.com/" target="blank">おでかけわんこ部</a></dt>
             <dd><a href="https://kiteretz.com/" target="blank">株式会社 キテレツ</a>のコラボレーターとして、<a href="" target="blank">SnowMonkey テーマ</a>のカスタマイズ、サーバの移転作業などを担当</dd>
+            <dt><a href="/ma/index.html" target="blank">ポートフォリオ M/A 2012年制作</a></dt>
+            <dd>ウェブデザイン、DTPの作例を掲載しています。</dd>
           </dl>
           <p>その他、書店アルバイトなど接客経験、製造業の現業経験、ネットショップ担当、<br />Microsoft Excel / VBA / Access を使った事務職の経験があります。</p>
+          <p>WEB・DTP デザインもできますが、あまり得意ではありません。</p>
         </section>
 
         <section>
