@@ -1,12 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
-
-import { Link } from "gatsby"
-
-import avatar from '../assets/images/avatar.jpg'
 
 const HomeIndex = () => {
   const siteTitle = 'Autumnsky systems'
@@ -21,7 +18,12 @@ const HomeIndex = () => {
 
       <div id="main">
         <section>
-          <img src={avatar} className="image avatar left"/>
+          <StaticImage
+            layout="constrained"
+            alt="Munenaga Akinari portrait photo"
+            src="../assets/images/portrait.jpg"
+            className="image avatar left"
+            />
           <p className="profile">
             <ruby>胸永 晃考<rp>（</rp><rt>ムネナガ アキナリ</rt><rp>）</rp></ruby>
             <br />フリーランス プログラマ
