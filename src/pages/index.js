@@ -6,14 +6,16 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 const HomeIndex = () => {
-  const siteTitle = 'Autumnsky systems'
+  const siteTitle = 'Autumnsky systems 胸永晃考'
   const siteDescription = '兵庫県三木市在住 フリーランス プログラマ 胸永晃考（ムネナガ アキナリ）'
+  const siteAuthor = '胸永 晃考 Munenaga Akinari'
 
   return (
     <Layout>
       <Helmet>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
+        <meta name="author" content={siteAuthor} />
       </Helmet>
 
       <div id="main">
