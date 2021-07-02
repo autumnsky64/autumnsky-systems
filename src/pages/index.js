@@ -2,13 +2,42 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
+import SkillList from '../components/SkillList'
 
 const HomeIndex = () => {
   const siteTitle = 'Autumnsky systems 胸永晃考'
   const siteDescription = '兵庫県三木市在住 フリーランス プログラマ 胸永晃考（ムネナガ アキナリ）'
   const siteAuthor = '胸永 晃考 Munenaga Akinari'
+
+  const skills = [
+    { genre : 'WordPress',
+      detail: [
+            'テーマ作成',
+            'プラグイン開発',
+            'ブロック開発',
+            'WP-CLI 活用',
+            '実行環境構築（Ubuntu、CentOS、Docker）'
+          ]
+    },{
+      genre: 'React',
+      detail: [
+          'WordPress ブロックエディタのブロック開発、エディタカスタマイズ',
+          'Gatsby でスターターを利用したサイト作成'
+      ]
+    },{
+      genre: 'JavaScript',
+      detail: [
+          'Vue.js でのフロントエンドのインタラクション作成',
+      ]
+    },{
+      genre: 'Androidアプリ',
+      detail: [
+          'Java / Kotlin によるネイティブアプリ',
+          'Realm DB'
+      ]
+    }
+  ]
 
   return (
     <Layout>
@@ -32,29 +61,10 @@ const HomeIndex = () => {
             <br />兵庫県三木市 在住
           </p>
         </section>
+
         <section>
           <h2>分野</h2>
-          <h3>WordPress</h3>
-          <ul>
-            <li>テーマ作成</li>
-            <li>プラグイン開発</li>
-            <li>ブロック開発</li>
-            <li>WP-CLI 活用</li>
-            <li>実行環境構築（Ubuntu、CentOS、Docker）</li>
-          </ul>
-
-          <h3>JavaScript</h3>
-          <ul>
-            <li>Vue.js でのフロントエンドのインタラクション作成</li>
-            <li>WordPress ブロックエディタのブロック開発</li>
-            <li>Gatsby でスターターを利用したサイト作成</li>
-          </ul>
-
-          <h3>Android アプリ</h3>
-          <ul>
-            <li>Java / Kotlin によるネイティブアプリ</li>
-            <li>Realm DB</li>
-          </ul>
+          { skills.map( skill => <SkillList {...skill} /> )}
         </section>
 
         <section>
@@ -66,8 +76,6 @@ const HomeIndex = () => {
             <dd><a href="https://kiteretz.com/" target="blank">株式会社 キテレツ</a>のコラボレーターとして、WordPress の投稿タイプ設計、テーマテンプレート設計、専用プラグインの作成を担当</dd>
             <dt><a href="https://play.google.com/store/apps/details?id=systems.autumnsky.linden_free" target="blank">LindenFree</a></dt>
             <dd>睡眠・服薬記録 Android アプリ</dd>
-            <dt><a href="https://covid19hyogo.org/" target="blank">COVID-19 Hyogo</a></dt>
-            <dd>兵庫県 COVID-19 ビジュアライゼーションサイト コントリビュータ</dd>
             <dt><a href="https://odekake-wanko-bu.com/" target="blank">おでかけわんこ部</a></dt>
             <dd><a href="https://kiteretz.com/" target="blank">株式会社 キテレツ</a>のコラボレーターとして、<a href="" target="blank">SnowMonkey テーマ</a>のカスタマイズ、サーバの移転作業などを担当</dd>
             <dt><a href="/ma/index.html" target="blank">ポートフォリオ M/A 2012年制作</a></dt>
