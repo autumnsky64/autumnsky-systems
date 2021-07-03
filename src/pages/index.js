@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
 import SkillList from '../components/SkillList'
+import AchivementList from '../components/AchivementList'
 
 const HomeIndex = () => {
   const siteTitle = 'Autumnsky systems 胸永晃考'
@@ -69,20 +70,10 @@ const HomeIndex = () => {
 
         <section>
           <h2>実績</h2>
-          <dl>
-            <dt><a href="https://wocker.dev/" target="blank">Wocker</a></dt>
-            <dd>Docker ベース WordPress 実行環境 コントリビュータ</dd>
-            <dt><a href="https://katsuragawa-lc.com/" target="blank">桂川レディースクリニック</a></dt>
-            <dd><a href="https://kiteretz.com/" target="blank">株式会社 キテレツ</a>のコラボレーターとして、WordPress の投稿タイプ設計、テーマテンプレート設計、専用プラグインの作成を担当</dd>
-            <dt><a href="https://play.google.com/store/apps/details?id=systems.autumnsky.linden_free" target="blank">LindenFree</a></dt>
-            <dd>睡眠・服薬記録 Android アプリ</dd>
-            <dt><a href="https://odekake-wanko-bu.com/" target="blank">おでかけわんこ部</a></dt>
-            <dd><a href="https://kiteretz.com/" target="blank">株式会社 キテレツ</a>のコラボレーターとして、<a href="" target="blank">SnowMonkey テーマ</a>のカスタマイズ、サーバの移転作業などを担当</dd>
-            <dt><a href="/ma/index.html" target="blank">ポートフォリオ M/A 2012年制作</a></dt>
-            <dd>ウェブデザイン、DTPの作例を掲載しています。</dd>
-          </dl>
+
+          <AchivementList />
+
           <p>その他、書店アルバイトなど接客経験、製造業の現業経験、ネットショップ担当、<br />Microsoft Excel / VBA / Access を使った事務職の経験があります。</p>
-          <p>WEB・DTP デザインもできますが、あまり得意ではありません。</p>
         </section>
 
         <section>
