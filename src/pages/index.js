@@ -11,35 +11,6 @@ const HomeIndex = () => {
   const siteDescription = '兵庫県三木市在住 フリーランス プログラマ 胸永晃考（ムネナガ アキナリ）'
   const siteAuthor = '胸永 晃考 Munenaga Akinari'
 
-  const skills = [
-    { genre : 'WordPress',
-      detail: [
-            'テーマ作成',
-            'プラグイン開発',
-            'ブロック開発',
-            'WP-CLI 活用',
-            '実行環境構築（Ubuntu、CentOS、Docker）'
-          ]
-    },{
-      genre: 'React',
-      detail: [
-          'WordPress ブロックエディタのブロック開発、エディタカスタマイズ',
-          'Gatsby でスターターを利用したサイト作成',
-          'Next.js によるウェブアプリ開発'
-      ]
-    },{
-      genre: 'JavaScript',
-      detail: [
-          'Vue.js でのフロントエンドのインタラクション作成',
-      ]
-    },{
-      genre: 'Androidアプリ',
-      detail: [
-          'Java / Kotlin によるネイティブアプリ',
-          'Realm DB'
-      ]
-    }
-  ]
 
   return (
     <Layout>
@@ -66,7 +37,7 @@ const HomeIndex = () => {
 
         <section>
           <h2>分野</h2>
-          { skills.map( skill => <SkillList {...skill} /> )}
+            <SkillList />
         </section>
 
         <section>
