@@ -24,7 +24,8 @@ const HomeIndex = () => {
       genre: 'React',
       detail: [
           'WordPress ブロックエディタのブロック開発、エディタカスタマイズ',
-          'Gatsby でスターターを利用したサイト作成'
+          'Gatsby でスターターを利用したサイト作成',
+          'Next.js によるウェブアプリ開発'
       ]
     },{
       genre: 'JavaScript',
